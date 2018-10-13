@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'movies';
+  public name: string;
+  public lastname: string;
+  public list:Array<string>;
+
+  constructor(){
+    this.list = [];
+  }
+
+  public show():void {
+    const item = `Nombre: ${this.name} - Apellido: ${this.lastname}`
+    alert(item);
+    this.list.push(item);
+  }
 }
